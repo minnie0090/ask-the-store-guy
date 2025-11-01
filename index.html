@@ -2,49 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Play Screen</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <!-- Background music -->
   <audio id="bg-music" src="music.mp3" loop></audio>
 
-  <div class="container">
-    <!-- Title PNG -->
-    <img src="title.png" alt="Game Title" class="title">
+  <!-- Title image -->
+  <img src="title.png" alt="Game Title" class="title">
 
-    <!-- Button PNGs -->
-    <div class="buttons">
-      <img src="play-button.png" alt="Play Button" class="button" id="play-btn">
-      <img src="leaderboard-button.png" alt="Leaderboard Button" class="button" id="leaderboard-btn">
-    </div>
-
-    <!-- Optional click-to-start music for browsers that block autoplay -->
-    <button id="start-music" class="start-music-btn">Click to Start</button>
+  <!-- Buttons -->
+  <div class="button-container">
+    <img src="play-button.png" alt="Play" id="play-btn" class="menu-btn">
+    <img src="leaderboard-button.png" alt="Leaderboard" id="leaderboard-btn" class="menu-btn">
   </div>
 
-  <script>
-    const bgMusic = document.getElementById('bg-music');
-    const startBtn = document.getElementById('start-music');
-
-    // Play music after user clicks anywhere
-    startBtn.addEventListener('click', () => {
-      bgMusic.play();
-      startBtn.style.display = 'none'; // hide button after starting music
-    });
-
-    // Redirect buttons
-    document.getElementById('play-btn').addEventListener('click', () => {
-      bgMusic.pause(); // optional: stop music when navigating
-      window.location.href = 'game.html'; 
-    });
-
-    document.getElementById('leaderboard-btn').addEventListener('click', () => {
-      bgMusic.pause();
-      window.location.href = 'leaderboard.html';
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
+
+
+
 
