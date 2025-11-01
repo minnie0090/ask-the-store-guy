@@ -23,7 +23,7 @@ body {
 
 /* Title image: increased width by 100px */
 .title {
-  width: 1000px;
+  width: 1200px;
   max-width: 90%;
   margin: 80px 0 40px 0; /* reduced top margin */
   height: auto;
@@ -94,7 +94,9 @@ body {
   max-height: 90vh;
   text-align: center;
 }
-
+audio {
+  display: none;
+}
 
 
 
