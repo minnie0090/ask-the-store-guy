@@ -7,9 +7,9 @@ document.body.addEventListener('click', () => {
   }
 }, { once: true });
 
-// Buttons: navigation
+// Button navigation
 document.getElementById('play-btn').addEventListener('click', () => {
-  bgMusic.pause(); // optional: stop music when navigating
+  bgMusic.pause();
   window.location.href = 'game.html';
 });
 
@@ -17,3 +17,5 @@ document.getElementById('leaderboard-btn').addEventListener('click', () => {
   bgMusic.pause();
   window.location.href = 'leaderboard.html';
 });
+
+
