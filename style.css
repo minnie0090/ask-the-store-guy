@@ -1,3 +1,26 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* prevent scroll */
+  overflow: hidden;
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* for absolute positioning of credits */
+}
+/* Credits in top-right */
+.credits {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 800px;  /* adjust size as needed */
+  height: auto;
+  z-index: 999;
+}
+
 /* Title image: increased width by 100px */
 .title {
   width: 1010px;       /* was 900px */
@@ -60,4 +83,5 @@
     margin-top: -80px; /* pulled up more */
   }
 }
+
 
