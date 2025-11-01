@@ -14,28 +14,34 @@ body {
   position: relative;
 }
 
-/* Centered UI container */
-.ui-center {
+/* Wrapper for the whole UI */
+.ui-wrapper {
   position: absolute;
-  top: 50%;  /* keep this here */
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 900px;
   text-align: center;
 }
 
-/* Title image */
+/* Title image: push it down */
 .title {
   width: 900px;
   max-width: 90%;
-  margin: 80px 0 40px 0;  /* added top margin to push it down */
+  margin: 150px 0 40px 0; /* big margin-top to lower title */
   height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Buttons side-by-side */
+/* Buttons side-by-side and pull them up */
 .button-container {
   display: flex;
   justify-content: center;
   gap: 50px;
+  margin-top: -120px; /* negative margin to pull buttons higher */
 }
 
 .menu-btn {
@@ -67,19 +73,22 @@ audio {
 /* Responsive tweaks */
 @media (max-width: 768px) {
   .title {
-    width: 400px;
+    width: 450px;
+    margin-top: 100px;
   }
   .menu-btn {
     width: 200px;
   }
   .button-container {
     gap: 30px;
+    margin-top: -80px;
   }
 }
 
 @media (max-width: 480px) {
   .title {
-    width: 300px;
+    width: 350px;
+    margin-top: 70px;
   }
   .menu-btn {
     width: 150px;
@@ -89,14 +98,8 @@ audio {
     top: 10px;
     right: 10px;
   }
+  .button-container {
+    margin-top: -60px;
+  }
 }
-
-
-
-
-
-
-
-
-
 
