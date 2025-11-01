@@ -1,21 +1,22 @@
 const bgMusic = document.getElementById('bg-music');
 
-// Play music on first user interaction
-document.addEventListener('click', () => {
+function playMusicOnInteraction() {
   if (bgMusic.paused) {
     bgMusic.play().catch(() => {});
   }
-}, { once: true });
+  document.removeEventListener('click', playMusicOnInteraction);
+  document.removeEventListener('touchstart', playMusicOnInteraction);
+}
 
-// Button click navigation
-document.getElementById('play-btn').addEventListener('click', () => {
-  bgMusic.pause();
-  window.location.href = 'game.html';
-});
+document.addEventListener('click', playMusicOnInteraction);
+document.addEventListener('touchstart', playMusicOnInteraction);
 
-document.getElementById('leaderboard-btn').addEventListener('click', () => {
-  bgMusic.pause();
-  window.location.href = 'leaderboard.html';
+// Pause music and navigate on link click
+document.querySelectorAll('.button-container a').forEach(link => {
+  link.addEventListener('click', (e) => {
+    bgMusic.pause();
+    // Navigation happens naturally by the link href
+  });
 });
 
 
