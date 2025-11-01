@@ -7,18 +7,17 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  min-height: 100vh;      /* ensures the page grows if needed */
-  overflow-x: hidden;     /* allow vertical scroll if needed */
-  overflow-y: auto;
+  height: 100vh;
+  overflow: hidden; /* No scroll bar */
 }
 
-/* Title image */
+/* Title PNG */
 .title {
-  width: 85%;
-  max-width: 1800px;
+  width: 75%;            /* slightly smaller so it all fits */
+  max-width: 1600px;
   height: auto;
-  margin-top: 80px;       /* distance from top */
-  margin-bottom: 120px;   /* space above buttons */
+  margin-top: 70px;       /* still some top breathing room */
+  margin-bottom: 80px;    /* gap between title and buttons */
   z-index: 10;
 }
 
@@ -27,15 +26,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 25px;              /* space between buttons */
+  gap: 40px;              /* nice spacing between buttons */
   z-index: 10;
-  margin-bottom: 80px;    /* bottom breathing room */
+  position: relative;
+  top: 0;
 }
 
 /* Buttons */
 .menu-btn {
-  width: 320px;           /* smaller, clean buttons */
+  width: 450px;           /* slightly larger for balance */
   height: auto;
   cursor: pointer;
   transition: transform 0.2s ease;
@@ -46,9 +45,9 @@ body {
   transform: scale(1.08);
 }
 
-/* Hide audio element */
 audio {
   display: none;
 }
+
 
 
