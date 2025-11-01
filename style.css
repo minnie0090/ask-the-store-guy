@@ -7,18 +7,19 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  min-height: 100vh;
-  overflow-x: hidden;
+  min-height: 100vh;      /* ensures the page grows if needed */
+  overflow-x: hidden;     /* allow vertical scroll if needed */
+  overflow-y: auto;
 }
 
-/* Title PNG */
+/* Title image */
 .title {
   width: 85%;
   max-width: 1800px;
   height: auto;
-  margin-top: 60px;        /* space from top */
-  margin-bottom: 80px;     /* space above buttons */
-  z-index: 2;              /* make sure it's above background */
+  margin-top: 80px;       /* distance from top */
+  margin-bottom: 120px;   /* space above buttons */
+  z-index: 10;
 }
 
 /* Button container */
@@ -26,26 +27,28 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;         /* ensures they stay visible on small screens */
-  gap: 25px;               /* space between buttons */
-  z-index: 2;
-  position: relative;
-  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 25px;              /* space between buttons */
+  z-index: 10;
+  margin-bottom: 80px;    /* bottom breathing room */
 }
 
-/* Button PNGs */
+/* Buttons */
 .menu-btn {
-  width: 320px;            /* smaller buttons */
+  width: 320px;           /* smaller, clean buttons */
   height: auto;
   cursor: pointer;
   transition: transform 0.2s ease;
-  z-index: 2;
+  z-index: 10;
 }
 
 .menu-btn:hover {
   transform: scale(1.08);
 }
 
+/* Hide audio element */
 audio {
   display: none;
 }
+
+
