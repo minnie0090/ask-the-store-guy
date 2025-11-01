@@ -1,15 +1,20 @@
-body {
+/* Reset */
+html, body {
   margin: 0;
   padding: 0;
-  background: url('background.jpg') no-repeat center center fixed;
-  background-size: cover;
-  height: 100vh;
-  width: 100vw;
-  position: relative;
-  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
-/* UI Center Anchor */
+/* Background */
+body {
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Centered UI container */
 .ui-center {
   position: absolute;
   top: 50%;
@@ -18,12 +23,12 @@ body {
   text-align: center;
 }
 
-/* Title in center */
+/* Title image */
 .title {
   width: 500px;
-  max-width: 80%;
+  max-width: 85%;
+  margin-bottom: 40px;
   height: auto;
-  margin-bottom: 40px; /* space between title + buttons */
 }
 
 /* Buttons side-by-side */
@@ -44,19 +49,46 @@ body {
   transform: scale(1.1);
 }
 
-/* Credits TOP RIGHT */
+/* Credits in top-right */
 .credits {
   position: absolute;
   top: 20px;
-  right: 20px; /* RIGHT instead of LEFT */
+  right: 20px;
   width: 120px;
   height: auto;
-  z-index: 10;
+  z-index: 999;
 }
 
 /* Hide audio element */
 audio {
   display: none;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .title {
+    width: 400px;
+  }
+  .menu-btn {
+    width: 200px;
+  }
+  .button-container {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    width: 300px;
+  }
+  .menu-btn {
+    width: 150px;
+  }
+  .credits {
+    width: 80px;
+    top: 10px;
+    right: 10px;
+  }
 }
 
 
