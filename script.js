@@ -1,22 +1,27 @@
 const bgMusic = document.getElementById('bg-music');
 
-function playMusicOnInteraction() {
+function tryPlayMusic() {
   if (bgMusic.paused) {
-    bgMusic.play().catch(() => {});
+    bgMusic.play().then(() => {
+      // Success: remove listeners once music plays
+      window.removeEventListener('click', tryPlayMusic);
+      window.removeEventListener('touchstart', tryPlayMusic);
+    }).catch(() => {
+      // If play() rejected (e.g., no user interaction), do nothing
+    });
   }
-  document.removeEventListener('click', playMusicOnInteraction);
-  document.removeEventListener('touchstart', playMusicOnInteraction);
 }
 
-document.addEventListener('click', playMusicOnInteraction);
-document.addEventListener('touchstart', playMusicOnInteraction);
+// Listen on window for click or touchstart
+window.addEventListener('click', tryPlayMusic, { passive: true });
+window.addEventListener('touchstart', tryPlayMusic, { passive: true });
 
-// Pause music and navigate on link click
+// Pause music when clicking nav links
 document.querySelectorAll('.button-container a').forEach(link => {
-  link.addEventListener('click', (e) => {
+  link.addEventListener('click', () => {
     bgMusic.pause();
-    // Navigation happens naturally by the link href
   });
 });
+
 
 
