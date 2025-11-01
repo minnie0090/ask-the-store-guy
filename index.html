@@ -1,27 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Play Screen</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
 <body>
-  <!-- Credits PNG in top-left corner -->
+  <!-- Credits in top-right corner -->
   <img src="credits.png" alt="Credits" class="credits">
 
-  <!-- Background music -->
-  <audio id="bg-music" src="music.mp3" loop></audio>
-
-  <!-- Title image -->
-  <img src="title.png" alt="Game Title" class="title">
-
-  <!-- Buttons -->
-  <div class="button-container">
-    <img src="play-button.png" alt="Play" id="play-btn" class="menu-btn">
-    <img src="leaderboard-button.png" alt="Leaderboard" id="leaderboard-btn" class="menu-btn">
+  <!-- UI centered -->
+  <div class="ui-center">
+    <img src="title.png" class="title">
+    <div class="button-container">
+      <img src="play-button.png" id="play-btn" class="menu-btn">
+      <img src="leaderboard-button.png" id="leaderboard-btn" class="menu-btn">
+    </div>
   </div>
 
+  <audio id="bg-music" src="music.mp3" loop></audio>
   <script src="script.js"></script>
 </body>
-</html>
