@@ -37,7 +37,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 50px;
-  margin-top: -170px; /* moved up 30px more (was -120px) */
+  margin-top: -210px; /* moved up 30px more (was -120px) */
 }
 
 .menu-btn {
@@ -83,6 +83,7 @@ body {
     margin-top: -80px; /* pulled up more */
   }
 }
+
 
 
 
