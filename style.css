@@ -13,7 +13,7 @@ body {
 
 .title {
   width: 60%;
-  max-width: 400px;     
+  max-width: 500px;
   height: auto;
   margin-top: -10px;   
   margin-bottom: 30px; 
@@ -26,7 +26,7 @@ body {
 }
 
 .menu-btn {
-  width: 220px;
+  width: 400px;
   height: auto;
   cursor: pointer;
   transition: transform 0.2s;
@@ -39,4 +39,5 @@ body {
 audio {
   display: none;
 }
+
 
