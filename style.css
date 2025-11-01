@@ -17,7 +17,7 @@ body {
 /* Centered UI container */
 .ui-center {
   position: absolute;
-  top: 52%; /* moved down from 45% */
+  top: 50%;  /* keep this here */
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -25,9 +25,9 @@ body {
 
 /* Title image */
 .title {
-  width: 900px;       /* made it wider */
-  max-width: 90%;     /* allowed bigger max-width */
-  margin-bottom: 40px;
+  width: 900px;
+  max-width: 90%;
+  margin: 80px 0 40px 0;  /* added top margin to push it down */
   height: auto;
 }
 
@@ -90,6 +90,7 @@ audio {
     right: 10px;
   }
 }
+
 
 
 
