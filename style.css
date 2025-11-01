@@ -13,7 +13,7 @@ body {
 
 .title {
   width: 60%;
-  max-width: 800px;
+  max-width: 1200px;
   height: auto;
   margin-top: 0px;   
   margin-bottom: 30px; 
@@ -23,6 +23,8 @@ body {
 .button-container {
   display: flex;
   gap: 30px;
+  position: relative;
+  top: -50px;  /* move buttons up */
 }
 
 .menu-btn {
@@ -39,6 +41,7 @@ body {
 audio {
   display: none;
 }
+
 
 
 
