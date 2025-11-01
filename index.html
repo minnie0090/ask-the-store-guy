@@ -1,16 +1,33 @@
-<body>
-  <!-- Credits in top-right corner -->
-  <img src="credits.png" alt="Credits" class="credits">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-  <!-- UI centered -->
+<body>
+
+  <!-- Credits in TOP RIGHT -->
+  <img src="credits.png" class="credits" alt="Credits">
+
+  <!-- Center UI -->
   <div class="ui-center">
-    <img src="title.png" class="title">
+    <img src="title.png" class="title" alt="Game Title">
+
     <div class="button-container">
-      <img src="play-button.png" id="play-btn" class="menu-btn">
-      <img src="leaderboard-button.png" id="leaderboard-btn" class="menu-btn">
+      <img src="play-button.png" id="play-btn" class="menu-btn" alt="Play Button">
+      <img src="leaderboard-button.png" id="leaderboard-btn" class="menu-btn" alt="Leaderboard Button">
     </div>
   </div>
 
+  <!-- Background Music -->
   <audio id="bg-music" src="music.mp3" loop></audio>
+
+  <!-- Script -->
   <script src="script.js"></script>
+
 </body>
+</html>
+
