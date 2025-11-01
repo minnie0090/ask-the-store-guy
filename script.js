@@ -1,13 +1,13 @@
 const bgMusic = document.getElementById('bg-music');
 
-// Start music on first click anywhere
-document.body.addEventListener('click', () => {
+// Play music on first user interaction
+document.addEventListener('click', () => {
   if (bgMusic.paused) {
     bgMusic.play().catch(() => {});
   }
 }, { once: true });
 
-// Button navigation
+// Button click navigation
 document.getElementById('play-btn').addEventListener('click', () => {
   bgMusic.pause();
   window.location.href = 'game.html';
