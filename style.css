@@ -1,6 +1,6 @@
 /* Title image: increased width by 100px */
 .title {
-  width: 1000px;       /* was 900px */
+  width: 1010px;       /* was 900px */
   max-width: 90%;
   margin: 150px 0 40px 0;
   height: auto;
@@ -60,3 +60,4 @@
     margin-top: -80px; /* pulled up more */
   }
 }
+
