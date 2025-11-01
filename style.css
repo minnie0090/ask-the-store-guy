@@ -13,7 +13,7 @@ body {
 
 .title {
   width: 60%;
-  max-width: 200px;
+  max-width: 2000px;
   height: auto;
   margin-top: 20px;   
   margin-bottom: 30px; 
@@ -41,6 +41,7 @@ body {
 audio {
   display: none;
 }
+
 
 
 
