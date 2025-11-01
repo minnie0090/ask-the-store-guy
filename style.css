@@ -1,3 +1,4 @@
+/* Body and background */
 body {
   margin: 0;
   padding: 0;
@@ -5,49 +6,88 @@ body {
   background-size: cover;
   display: flex;
   flex-direction: column;
+  justify-content: center;  /* vertical centering for title/buttons */
   align-items: center;
-  justify-content: flex-start;
   height: 100vh;
-  overflow: hidden; /* No scroll bar */
+  overflow: hidden;
+  position: relative;  /* needed for absolute positioning of credits */
 }
 
-/* Title PNG */
+/* Title image */
 .title {
-  width: 75%;            /* slightly smaller so it all fits */
-  max-width: 1600px;
+  width: 70%;           /* adjust size of title */
+  max-width: 500px;
   height: auto;
-  margin-top: 70px;       /* still some top breathing room */
-  margin-bottom: 80px;    /* gap between title and buttons */
-  z-index: 10;
-}
-
-/* Button container */
-.button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;              /* nice spacing between buttons */
-  z-index: 10;
-  position: relative;
-  top: 0;
+  margin: 0 0 30px 0;   /* bottom spacing from buttons */
 }
 
 /* Buttons */
+.button-container {
+  display: flex;
+  gap: 50px;            /* space between buttons */
+}
+
 .menu-btn {
-  width: 450px;           /* slightly larger for balance */
+  width: 250px;         /* larger buttons */
   height: auto;
   cursor: pointer;
-  transition: transform 0.2s ease;
-  z-index: 10;
+  transition: transform 0.2s;
 }
 
 .menu-btn:hover {
-  transform: scale(1.08);
+  transform: scale(1.1);
 }
 
+/* Credits PNG */
+.credits {
+  position: absolute;   /* top-left corner */
+  top: 20px;
+  left: 20px;
+  width: 120px;         /* adjust as needed */
+  height: auto;
+  z-index: 10;
+}
+
+/* Hide audio player */
 audio {
   display: none;
 }
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .title {
+    width: 80%;
+    max-width: 400px;
+  }
+  .menu-btn {
+    width: 180px;
+  }
+  .button-container {
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .credits {
+    width: 90px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    width: 90%;
+    max-width: 300px;
+  }
+  .menu-btn {
+    width: 150px;
+  }
+  .credits {
+    width: 70px;
+    top: 10px;
+    left: 10px;
+  }
+}
+
+
 
 
 
