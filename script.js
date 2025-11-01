@@ -1,16 +1,16 @@
 const bgMusic = document.getElementById('bg-music');
 
-// Play music on first click anywhere on the page
+// Start music on first click anywhere
 document.body.addEventListener('click', () => {
   if (bgMusic.paused) {
-    bgMusic.play();
+    bgMusic.play().catch(() => {});
   }
-});
+}, { once: true });
 
-// Redirect buttons
+// Buttons: navigation
 document.getElementById('play-btn').addEventListener('click', () => {
   bgMusic.pause(); // optional: stop music when navigating
-  window.location.href = 'game.html'; 
+  window.location.href = 'game.html';
 });
 
 document.getElementById('leaderboard-btn').addEventListener('click', () => {
