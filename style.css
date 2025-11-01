@@ -25,7 +25,7 @@ body {
 
 /* Title image */
 .title {
-  width: 500px;
+  width: 800px;
   max-width: 85%;
   margin-bottom: 40px;
   height: auto;
@@ -39,7 +39,7 @@ body {
 }
 
 .menu-btn {
-  width: 250px;
+  width: 400px;
   height: auto;
   cursor: pointer;
   transition: transform 0.2s;
@@ -54,7 +54,7 @@ body {
   position: absolute;
   top: 20px;
   right: 20px;
-  width: 120px;
+  width: 300px;
   height: auto;
   z-index: 999;
 }
@@ -90,6 +90,7 @@ audio {
     right: 10px;
   }
 }
+
 
 
 
