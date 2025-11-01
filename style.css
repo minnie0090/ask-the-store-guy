@@ -78,21 +78,22 @@ audio {
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-  .title {
-    width: 65vw;
-    margin-top: 30px;
-  }
-  .menu-btn {
-    width: 220px;
+   .title {
+    width: 70vw;
+    margin-top: 30px; /* keep as is or reduce if needed */
   }
   .button-container {
+    margin-top: -140px; /* moved up 100px closer to title (was -40px) */
     gap: 20px;
-    margin-top: -30px;
     flex-wrap: wrap;
     justify-content: center;
   }
+  .menu-btn {
+    width: 280px; /* 100px bigger than typical 180px */
+    height: auto;
+  }
   .credits {
-    width: 140px;
+    width: 270px; /* 150px bigger if original was ~120px */
     top: 10px;
     right: 10px;
   }
@@ -119,6 +120,7 @@ audio {
     right: 20px;
   }
 }
+
 
 
 
