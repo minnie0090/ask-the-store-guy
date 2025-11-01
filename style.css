@@ -5,37 +5,39 @@ body {
   background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* aligns items toward top */
   align-items: center;
   height: 100vh;
   overflow: hidden;
 }
 
+/* Title PNG */
 .title {
-  width: 70%;
-  max-width: 2000px;
+  width: 85%;              /* make it bigger */
+  max-width: 1800px;       /* prevent it from being too large */
   height: auto;
-  margin-top: 30px;   
-  margin-bottom: 20px; 
+  margin-top: 80px;        /* more space from top */
+  margin-bottom: 100px;    /* space between title and buttons */
 }
 
-
+/* Button container */
 .button-container {
   display: flex;
-  gap: 30px;
+  gap: 20px;               /* bring buttons closer together */
   position: relative;
-  top: -70px;  /* move buttons up */
+  top: 0;                  /* remove upward shift */
 }
 
+/* Button PNGs */
 .menu-btn {
-  width: 800px;
+  width: 400px;            /* smaller buttons */
   height: auto;
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: transform 0.2s ease;
 }
 
 .menu-btn:hover {
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
 
 audio {
